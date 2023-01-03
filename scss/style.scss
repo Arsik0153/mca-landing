@@ -1,0 +1,149 @@
+.section-navbar {
+    margin-top: 47px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+
+    .links {
+        display: grid;
+        grid-auto-flow: column;
+        gap: 40px;
+
+        .link {
+            color: #757575;
+            font-weight: 400;
+            font-size: 1.8rem;
+        }
+    }
+
+    .sign {
+        padding: 15px 23px;
+        background: #ffffff;
+        border-radius: 7px;
+        font-weight: 500;
+        font-size: 1.8rem;
+        color: #3a3b40;
+    }
+}
+
+.hero {
+    background-image: url("public/hero-bg.png"),
+        linear-gradient(
+            104.98deg,
+            #615f66 31.19%,
+            #615f66 63.5%,
+            #3a3b40 93.84%
+        );
+    background-repeat: no-repeat;
+    padding-bottom: 120px;
+}
+
+.section-main {
+    margin-top: 77px;
+    position: relative;
+
+    .heading {
+        font-family: "Fjalla One", sans-serif;
+        font-size: 5.8rem;
+        font-weight: 400;
+        color: #3a3b40;
+
+        .boxed {
+            background: rgba(249, 217, 92, 0.2);
+            border: 1px dashed #f9d95c;
+            border-radius: 6px;
+            padding: 4px;
+        }
+    }
+
+    .join {
+        margin-top: 43px;
+        display: grid;
+        grid-template-columns: 19px 1fr;
+        gap: 0 20px;
+        align-items: center;
+
+        .dot {
+            width: 19px;
+            height: 19px;
+            background: #141414;
+            border-radius: 100%;
+            display: grid;
+            place-items: center;
+            margin-top: 8px;
+
+            .inner {
+                width: 9px;
+                height: 9px;
+                background: #fada5c;
+                box-shadow: 0px 0px 6px #fada5c;
+                border-radius: 100%;
+            }
+        }
+
+        h4 {
+            font-weight: 700;
+            font-size: 3.2rem;
+            color: #757575;
+        }
+
+        p {
+            grid-column-start: 2;
+            font-weight: 500;
+            font-size: 2rem;
+            color: #757575;
+        }
+    }
+
+    .cta {
+        width: 480px;
+        height: 170px;
+        background: url("public/btn-bg.png") no-repeat;
+        background-position: 5px 10px;
+        background-size: calc(100% - 10px) calc(100% - 20px);
+        display: grid;
+        align-items: center;
+        grid-template-columns: 1fr auto;
+        margin-top: 67px;
+        position: relative;
+
+        .click {
+            grid-row: 1 / 3;
+            grid-column: 2 / 3;
+            justify-self: center;
+            margin-right: 40px;
+        }
+
+        .text {
+            font-family: "Encode Sans", sans-serif;
+            font-weight: 700;
+            font-size: 2.4rem;
+            line-height: 150%;
+            color: #141414;
+            align-self: end;
+        }
+
+        .descr {
+            font-weight: 500;
+            font-size: 1.8rem;
+            color: #141414;
+            align-self: start;
+            margin-top: 10px;
+        }
+
+        .offer {
+            position: absolute;
+            height: 85px;
+            width: 85px;
+            right: -30px;
+            top: -30px;
+        }
+    }
+
+    .iphone {
+        position: absolute;
+        top: -180px;
+        right: -20px;
+        pointer-events: none;
+    }
+}
