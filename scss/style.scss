@@ -27,7 +27,7 @@
 }
 
 .hero {
-    background-image: url("public/hero-bg.png"),
+    background-image: url("/hero-bg.png"),
         linear-gradient(
             104.98deg,
             #615f66 31.19%,
@@ -98,7 +98,7 @@
     .cta {
         width: 480px;
         height: 170px;
-        background: url("public/btn-bg.png") no-repeat;
+        background: url("/btn-bg.png") no-repeat;
         background-position: 5px 10px;
         background-size: calc(100% - 10px) calc(100% - 20px);
         display: grid;
