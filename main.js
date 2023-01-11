@@ -25,3 +25,17 @@ document.querySelectorAll("img.img-svg").forEach(function (img) {
             img.parentNode.replaceChild($svg, img);
         });
 });
+
+// Accordion
+const accordions = document.querySelectorAll(".accordion");
+accordions.forEach((el) =>
+    el.addEventListener("click", (e) => {
+        const content = e.currentTarget.querySelector(".accordion-content");
+        content.classList.toggle("active");
+        if (content.classList.contains("active")) {
+            el.setAttribute("data-open", "true");
+        } else {
+            el.setAttribute("data-open", "false");
+        }
+    })
+);

@@ -28,15 +28,27 @@
 
 .hero {
     background: #fff;
-    background-image: url("/hero-bg.png"),
-        linear-gradient(
-            104.98deg,
-            #615f66 31.19%,
-            #615f66 63.5%,
-            #3a3b40 93.84%
-        );
+    background-image: linear-gradient(
+        104.98deg,
+        #615f66 31.19%,
+        #615f66 63.5%,
+        #3a3b40 93.84%
+    );
     background-repeat: no-repeat;
-    padding-bottom: 120px;
+    padding-bottom: 12rem;
+    position: relative;
+    @media screen and (max-width: 1500px) {
+        padding-bottom: 7rem;
+    }
+    .bg {
+        position: absolute;
+        height: 100%;
+        width: 140rem;
+        max-width: unset;
+        @media screen and (max-width: 1500px) {
+            left: -25rem;
+        }
+    }
 }
 
 .section-main {
@@ -98,9 +110,18 @@
 
     .iphone {
         position: absolute;
-        top: -180px;
-        right: -20px;
+        top: -18rem;
+        right: -2rem;
         pointer-events: none;
+        @media screen and (max-width: 1500px) {
+            top: -20rem;
+            right: -19rem;
+            width: 90%;
+        }
+        @media screen and (max-width: 1000px) {
+            width: 80%;
+            top: -5rem;
+        }
     }
 }
 
@@ -423,4 +444,127 @@
     .cta {
         margin: 2rem auto 0 auto;
     }
+}
+
+.faq__section {
+    .accordions {
+        max-width: 1010px;
+        width: 100%;
+        margin: 0 auto;
+    }
+    .accordion {
+        color: #000;
+        border-top: 1px solid #141414;
+        width: 100%;
+        display: flex;
+        flex-direction: column;
+        padding: 2rem 4.4rem 2rem 4.4rem;
+        cursor: pointer;
+        overflow: hidden;
+        &[data-open="true"] {
+            img {
+                transform: none;
+                transition: 0.2s ease-in-out;
+            }
+        }
+        .control {
+            display: flex;
+            align-items: center;
+        }
+        img {
+            margin-left: auto;
+            transform: rotate(180deg);
+            transition: 0.2s ease-in-out;
+        }
+        .heading {
+            font-size: 2rem;
+        }
+        p {
+            overflow: hidden;
+            font-size: 1.6rem;
+            max-width: 70.7rem;
+            margin-top: 1rem;
+            max-height: 0;
+            transition: 0.3s ease-in-out;
+            &.active {
+                max-height: 500px;
+            }
+        }
+    }
+}
+
+.get__section {
+    padding-bottom: 10rem;
+    .books {
+        display: grid;
+        grid-template-columns: repeat(4, 1fr);
+    }
+    .book {
+        font-weight: 500;
+        font-size: 2rem;
+        color: #141414;
+        .badge {
+            padding: 1rem 3rem;
+            border: 1px solid #141414;
+            border-radius: 0.7rem;
+            width: fit-content;
+            margin: 0 auto;
+            position: relative;
+            background: #fff;
+            z-index: 1;
+            .tick {
+                position: absolute;
+                top: -25%;
+                left: 50%;
+                transform: translateX(-50%);
+            }
+        }
+    }
+    .lines {
+        display: flex;
+        align-items: center;
+        flex-direction: column;
+        .line {
+            transform: translateY(-10rem);
+        }
+        .total {
+            font-weight: 500;
+            font-size: 2.6rem;
+            color: #ffffff;
+            padding: 1.5rem 3rem;
+            background: #262525;
+            border-radius: 7px;
+            position: relative;
+            margin-top: -15rem;
+            .tick {
+                position: absolute;
+                top: -28%;
+                left: 50%;
+                transform: translateX(-50%);
+            }
+        }
+    }
+    .today {
+        font-family: "Fjalla One", sans-serif;
+        font-weight: 400;
+        font-size: 5.8rem;
+        color: #141414;
+        margin: 5rem 0;
+        text-align: center;
+    }
+    .cta {
+        margin-left: auto;
+        margin-right: auto;
+    }
+}
+
+.footer__section {
+    padding: 10rem 0;
+    background: #141414;
+    font-family: "Encode Sans", sans-serif;
+    font-weight: 500;
+    font-size: 1.4rem;
+    color: #b4b4b4;
+    line-height: 150%;
+    white-space: pre-line;
 }
