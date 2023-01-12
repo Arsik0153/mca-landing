@@ -1,28 +1,77 @@
 .section-navbar {
-    margin-top: 47px;
+    margin-top: 4.6rem;
     display: flex;
     justify-content: space-between;
     align-items: center;
-
+    .logo {
+        width: 7.5rem;
+        @media screen and (max-width: 992px) {
+            width: 6.4rem;
+        }
+    }
     .links {
         display: grid;
         grid-auto-flow: column;
-        gap: 40px;
-
+        gap: 4rem;
+        @media screen and (max-width: 992px) {
+            gap: 3rem;
+        }
+        @media screen and (max-width: 768px) {
+            display: none;
+        }
         .link {
             color: #757575;
             font-weight: 400;
             font-size: 1.8rem;
         }
     }
-
     .sign {
-        padding: 15px 23px;
+        padding: 1.5rem 2.3rem;
         background: #ffffff;
         border-radius: 7px;
         font-weight: 500;
         font-size: 1.8rem;
         color: #3a3b40;
+        @media screen and (max-width: 768px) {
+            display: none;
+        }
+    }
+    .menu-btn {
+        display: none;
+        @media screen and (max-width: 768px) {
+            display: block;
+        }
+        @media screen and (max-width: 576px) {
+            width: 5rem;
+            height: 5rem;
+        }
+    }
+    .mobile-menu {
+        position: fixed;
+        top: 0;
+        left: 0;
+        width: 100%;
+        background: #fff;
+        padding-top: 4.6rem;
+        z-index: 2;
+        display: none;
+        .top {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+        .mobile-links {
+            margin-top: 2rem;
+            display: grid;
+            grid-auto-flow: row;
+            a {
+                color: #757575;
+                font-weight: 500;
+                font-size: 2rem;
+                text-align: center;
+                padding: 1rem 0;
+            }
+        }
     }
 }
 
@@ -40,6 +89,9 @@
     @media screen and (max-width: 1500px) {
         padding-bottom: 7rem;
     }
+    @media screen and (max-width: 768px) {
+        padding-bottom: 3.5rem;
+    }
     .bg {
         position: absolute;
         height: 100%;
@@ -48,34 +100,59 @@
         @media screen and (max-width: 1500px) {
             left: -25rem;
         }
+        @media screen and (max-width: 992px) {
+            left: -46rem;
+        }
+        @media screen and (max-width: 768px) {
+            left: 0rem;
+            width: 170rem;
+        }
     }
 }
 
 .section-main {
-    margin-top: 77px;
+    margin-top: 7.7rem;
     position: relative;
+    @media screen and (max-width: 768px) {
+        margin-top: 5.5rem;
+    }
 
     .heading {
         font-family: "Fjalla One", sans-serif;
         font-size: 5.8rem;
         font-weight: 400;
         color: #3a3b40;
-
+        @media screen and (max-width: 768px) {
+            text-align: center;
+            font-size: 5rem;
+        }
+        @media screen and (max-width: 576px) {
+            font-size: 2.4rem;
+            text-align: left;
+        }
         .boxed {
             background: rgba(249, 217, 92, 0.2);
             border: 1px dashed #f9d95c;
             border-radius: 6px;
-            padding: 4px;
+            padding: 0.4rem;
         }
     }
 
     .join {
-        margin-top: 43px;
+        margin-top: 4.3rem;
         display: grid;
-        grid-template-columns: 19px 1fr;
-        gap: 0 20px;
+        grid-template-columns: 1.9rem 1fr;
+        gap: 0 2rem;
         align-items: center;
-
+        width: fit-content;
+        @media screen and (max-width: 768px) {
+            margin-left: auto;
+            margin-right: auto;
+        }
+        @media screen and (max-width: 576px) {
+            margin-left: unset;
+            margin-top: 3rem;
+        }
         .dot {
             width: 19px;
             height: 19px;
@@ -83,7 +160,7 @@
             border-radius: 100%;
             display: grid;
             place-items: center;
-            margin-top: 8px;
+            margin-top: 0.8rem;
 
             .inner {
                 width: 9px;
@@ -98,6 +175,12 @@
             font-weight: 700;
             font-size: 3.2rem;
             color: #757575;
+            @media screen and (max-width: 768px) {
+                font-size: 2.7rem;
+            }
+            @media screen and (max-width: 576px) {
+                font-size: 1.6rem;
+            }
         }
 
         p {
@@ -105,9 +188,14 @@
             font-weight: 500;
             font-size: 2rem;
             color: #757575;
+            @media screen and (max-width: 768px) {
+                font-size: 1.7rem;
+            }
+            @media screen and (max-width: 576px) {
+                font-size: 1.3rem;
+            }
         }
     }
-
     .iphone {
         position: absolute;
         top: -18rem;
@@ -118,9 +206,65 @@
             right: -19rem;
             width: 90%;
         }
-        @media screen and (max-width: 1000px) {
+        @media screen and (max-width: 992px) {
             width: 80%;
             top: -5rem;
+        }
+        @media screen and (max-width: 768px) {
+            display: none;
+        }
+    }
+    .cta {
+        @media screen and (max-width: 768px) {
+            margin: 3rem auto 0 auto;
+            width: 48rem;
+            .click {
+                margin-right: 3rem;
+            }
+        }
+        @media screen and (max-width: 576px) {
+            width: 100%;
+            height: auto;
+            min-height: 15rem;
+            padding: 0 1.7rem;
+            gap: 1rem;
+            .text {
+                font-size: 1.6rem;
+            }
+            .click {
+                width: 6.3rem;
+                height: 6.3rem;
+                margin-right: 0;
+            }
+        }
+    }
+}
+
+.mobile-iphone {
+    @media screen and (min-width: 769px) {
+        display: none;
+    }
+    background: linear-gradient(
+        83.12deg,
+        #615f66 -33.15%,
+        #615f66 45.58%,
+        #3a3b40 90.4%
+    );
+    height: 59rem;
+    position: relative;
+    @media screen and (max-width: 576px) {
+        height: 36rem;
+    }
+    .iphone {
+        width: 110%;
+        position: absolute;
+        max-width: unset;
+        left: -13rem;
+        top: -13rem;
+        @media screen and (max-width: 576px) {
+            left: -6rem;
+            top: -3rem;
+            height: 36rem;
         }
     }
 }

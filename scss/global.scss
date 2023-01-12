@@ -223,3 +223,34 @@ section {
         }
     }
 }
+
+br {
+    &.arsp {
+        // visible before tablets
+        display: inline;
+        @media (max-width: 768px) {
+            display: none;
+        }
+    }
+    &.rsp {
+        // visible until tablets
+        display: none;
+        @media (max-width: 768px) {
+            display: inline;
+        }
+    }
+    &.h {
+        // hidden on mobiles
+        display: inline;
+        @media (max-width: 576px) {
+            display: none;
+        }
+    }
+    &.m {
+        // visible on mobiles
+        display: none;
+        @media (max-width: 576px) {
+            display: inline;
+        }
+    }
+}
