@@ -39,8 +39,9 @@ body {
     justify-content: flex-start;
 }
 
-// font-family: 'Inter', sans-serif;
-// font-family: 'Unbounded', cursive;
+.main {
+    flex-grow: 1;
+}
 
 .my-body-noscroll-class {
     overflow: hidden;
@@ -180,7 +181,7 @@ section {
 .cta {
     width: 480px;
     height: 170px;
-    background: url("/btn-bg.png") no-repeat;
+    background: url("/public/btn-bg.png") no-repeat;
     background-position: 5px 10px;
     background-size: calc(100% - 10px) calc(100% - 20px);
     display: grid;
@@ -220,7 +221,7 @@ section {
         top: -30px;
     }
     &.dark {
-        background: url("/btn-bg-dark.png") no-repeat;
+        background: url("/public/btn-bg-dark.png") no-repeat;
         background-size: calc(100% - 10px) calc(100% - 20px);
         background-position: 5px 10px;
         .text,
@@ -286,5 +287,97 @@ br {
         @media (max-width: 576px) {
             display: inline;
         }
+    }
+}
+
+.section-navbar {
+    margin-top: 4.6rem;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    .logo {
+        width: 7.5rem;
+        @media screen and (max-width: 992px) {
+            width: 6.4rem;
+        }
+    }
+    .links {
+        display: grid;
+        grid-auto-flow: column;
+        gap: 4rem;
+        @media screen and (max-width: 992px) {
+            gap: 3rem;
+        }
+        @media screen and (max-width: 768px) {
+            display: none;
+        }
+        .link {
+            color: #757575;
+            font-weight: 400;
+            font-size: 1.8rem;
+        }
+    }
+    .sign {
+        padding: 1.5rem 2.3rem;
+        background: #ffffff;
+        border-radius: 7px;
+        font-weight: 500;
+        font-size: 1.8rem;
+        color: #3a3b40;
+        @media screen and (max-width: 768px) {
+            display: none;
+        }
+    }
+    .menu-btn {
+        display: none;
+        @media screen and (max-width: 768px) {
+            display: block;
+        }
+        @media screen and (max-width: 576px) {
+            width: 5rem;
+            height: 5rem;
+        }
+    }
+    .mobile-menu {
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        background: #fff;
+        padding-top: 4.6rem;
+        z-index: 2;
+        display: none;
+        margin-top: -4.6rem;
+        .top {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+        .mobile-links {
+            margin-top: 2rem;
+            display: grid;
+            grid-auto-flow: row;
+            a {
+                color: #757575;
+                font-weight: 500;
+                font-size: 2rem;
+                text-align: center;
+                padding: 1rem 0;
+            }
+        }
+    }
+}
+
+.footer__section {
+    padding: 10rem 0;
+    background: #141414;
+    font-family: "Encode Sans", sans-serif;
+    font-weight: 500;
+    font-size: 1.4rem;
+    color: #b4b4b4;
+    line-height: 150%;
+    @media screen and (max-width: 576px) {
+        padding: 5rem 0;
+        font-size: 1rem;
     }
 }
