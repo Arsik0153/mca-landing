@@ -67,26 +67,46 @@
             <div class="container">
                 <div class="account-box">
                     <div class="sidebar">
-                        <a class="active" href="/account/">DASHBOARD</a>
+                        <a href="/account/">DASHBOARD</a>
                         <a href="">ORDERS</a>
                         <a href="">DOWNLOADS</a>
                         <a href="/addresses/">ADDRESSES</a>
-                        <a href="/details/">ACCOUNT DETAILS</a>
+                        <a class="active" href="/details/">ACCOUNT DETAILS</a>
                         <a href="">LOGOUT</a>
                     </div>
                     <div class="content">
-                        <p class="align-right">
-                            Hello <strong>Name</strong> (not
-                            <strong>Name</strong> ? <a href="">Log out</a> )
-                        </p>
-                        <p class="uppercase">
-                            FROM YOUR ACCOUNT DASHBOARD YOU CAN VIEW YOUR
-                            <a href="">RECENT ORDERS</a>, MANAGE YOUR
-                            <a href="">SHIPPING AND BILLING ADDRESSES</a> , AND
-                            <a href=""
-                                >EDIT YOUR PASSWORD AND ACCOUNT DETAILS.</a
+                        <form action="" class="account-form">
+                            <div class="grid">
+                                <div class="group">
+                                    <label>First name</label>
+                                    <input type="text" name="" />
+                                </div>
+                                <div class="group">
+                                    <label>Last name</label>
+                                    <input type="text" name="" />
+                                </div>
+                            </div>
+                            <label>Display name</label>
+                            <input type="text" name="" />
+                            <label>E-mail address</label>
+                            <input type="email" name="" />
+                            <h4>Password change</h4>
+                            <label
+                                >Current password (leave blank to leave
+                                unchanged)</label
                             >
-                        </p>
+                            <input type="password" name="" />
+                            <label
+                                >New password (leave blank to leave
+                                unchanged)</label
+                            >
+                            <input type="password" name="" />
+                            <label>Confirm new password</label>
+                            <input type="password" name="" />
+                            <button type="submit" class="btn-acc">
+                                Save changes
+                            </button>
+                        </form>
                     </div>
                 </div>
             </div>
