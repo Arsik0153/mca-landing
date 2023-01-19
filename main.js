@@ -1,6 +1,7 @@
 import "normalize.css";
 import "./scss/global.scss";
 import "./scss/style.scss";
+import "./global";
 
 // replace all img.img-svg with svg elements
 document.querySelectorAll("img.img-svg").forEach(function (img) {
@@ -39,16 +40,3 @@ accordions.forEach((el) =>
         }
     })
 );
-
-// Mobile menu
-const open = document.querySelector("#open-menu");
-const close = document.querySelector("#close-menu");
-const menu = document.querySelector(".mobile-menu");
-
-open.addEventListener("click", () => {
-    menu.style.display = "block";
-});
-
-close.addEventListener("click", () => {
-    menu.style.display = "none";
-});
